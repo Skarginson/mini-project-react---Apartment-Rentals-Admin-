@@ -19,7 +19,7 @@ body {
   width: 100vw;
   margin: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 nav {
@@ -41,15 +41,18 @@ nav > img {
   list-style: none;
 }
 
+.sidebar {
+  width: max-content;
+}
+
 main {
   background-color: #e0f2f1;
+  /* height: 74%; */
   display: flex;
-  height: 74%;
 }
 
 .main-div {
   margin: 3%;
-  display: flex;
 }
 
 footer {
