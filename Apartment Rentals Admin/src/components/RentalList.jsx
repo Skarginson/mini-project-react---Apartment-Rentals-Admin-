@@ -9,14 +9,19 @@ function RentalList() {
 
   function deleteRentals(name) {
     const rentalsToKeep = rentalsAvailable.results.filter(
-      (rentals) => rentals.name !== name
+      (rental) => rental.name !== name
     );
-    setRentals(rentalsToKeep);
+
+    setRentals({
+      ...rentalsAvailable,
+      results: rentalsToKeep,
+    });
   }
+
   return (
     <div className="rentals-list">
       <h2>Rentals Lists</h2>
-      {rentals.results.map((el) => {
+      {rentalsAvailable.results.map((el) => {
         return (
           <div key={el.id}>
             <p className="Name"> {el.name}</p>
