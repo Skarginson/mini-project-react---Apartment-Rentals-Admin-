@@ -55,10 +55,23 @@ main {
   margin: 3%;
 }
 
+main > img {
+  height: 10rem;
+}
+
+.Pictures {
+  max-width: 50rem;
+}
+
 footer {
   height: 2%;
   background-color: #80cbc4;
   color: #000;
   padding: 1rem;
   text-align: center;
+}
+
+a.active {
+  background-color: antiquewhite;
+  color: #000;
 }

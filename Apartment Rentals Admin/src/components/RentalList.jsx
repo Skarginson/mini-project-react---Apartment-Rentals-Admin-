@@ -2,10 +2,22 @@ import rentals from "../assets/rentals.json";
 import villachere from "../assets/villachere.jpg";
 import FlagFrance from "../assets/Flag_of_France.png";
 import FlagSpain from "../assets/Flag_of_Spain.png";
-import { useState } from "react";
+// import NotFound from "../pages/NotFound";
+import { useState,} from "react";
+import { Link } from "react-router-dom";
+
+
 
 function RentalList() {
   const [rentalsAvailable, setRentals] = useState(rentals);
+  // const { id } = useParams();
+  // const rental = rentals.find((rent) => rent.id === parseInt(id));
+  // if (!rental){
+  //   return (
+  //     <NotFound/>
+  //   )
+  // }
+// console.log(id)
 
   function deleteRentals(name) {
     const rentalsToKeep = rentalsAvailable.results.filter(
@@ -23,22 +35,18 @@ function RentalList() {
       <h2>Rentals Lists</h2>
       {rentalsAvailable.results.map((el) => {
         return (
-          <div key={el.id}>
+          <Link key={el.id} to={`/rentals/${el.id}`}>
             <p className="Name"> {el.name}</p>
             <p className="Localisation">
               {el.country} - {el.city}
             </p>
-            <p className="Details">
-              {el.bathrooms}
-              {el.bedrooms}
-              {el.price}
-              {el.property_type}
-            </p>
             <button onClick={() => deleteRentals(el.name)}>Delete</button>
-            <img src={villachere} />
+            <img src={villachere} className="Pictures"/>
             {el.country === "France" && <img src={FlagFrance} />}
             {el.country === "Spain" && <img src={FlagSpain} />}
-          </div>
+          </Link>
+      
+
         );
       })}
     </div>
@@ -46,5 +54,3 @@ function RentalList() {
 }
 
 export default RentalList;
-
-// property type : afficher ou pas un petit logo.
