@@ -36,14 +36,16 @@ function RentalList() {
       {rentalsAvailable.results.map((el) => {
         return (
           <Link key={el.id} to={`/rentals/${el.id}`}>
-            <p className="Name"> {el.name}</p>
-            <p className="Localisation">
+            <div className="rentals-card">
+            <p className="name"> {el.name}</p>
+            <p className="localisation">
               {el.country} - {el.city}
             </p>
+            <img src={villachere} />
+            {el.country === "France" && <img src={FlagFrance} className="flag" />}
+            {el.country === "Spain" && <img src={FlagSpain} className="flag" />}
             <button onClick={() => deleteRentals(el.name)}>Delete</button>
-            <img src={villachere} className="Pictures"/>
-            {el.country === "France" && <img src={FlagFrance} />}
-            {el.country === "Spain" && <img src={FlagSpain} />}
+          </div>
           </Link>
       
 

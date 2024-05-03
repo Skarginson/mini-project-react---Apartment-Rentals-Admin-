@@ -53,6 +53,7 @@ main {
 
 .main-div {
   margin: 3%;
+  width: 100%;
 }
 
 main > img {
@@ -74,4 +75,27 @@ footer {
 a.active {
   background-color: antiquewhite;
   color: #000;
+}
+
+.rentals-card {
+  height: 30rem;
+  box-shadow: #000;
+  width: 33%;
+  border: red solid 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rentals-card > img:first-of-type {
+  height: 15rem;
+}
+
+.flag {
+  height: 3rem;
+}
+
+.rentals-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
