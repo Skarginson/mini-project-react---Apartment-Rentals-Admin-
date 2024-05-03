@@ -99,3 +99,9 @@ a.active {
   display: flex;
   flex-wrap: wrap;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

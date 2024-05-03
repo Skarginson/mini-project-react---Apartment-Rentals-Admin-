@@ -20,6 +20,14 @@ function Sidebar() {
             About
             </NavLink>
           </li>
+          <li>
+          <NavLink
+            to="/NewItemForm"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            >
+            Add a new rental
+            </NavLink>
+          </li>
         </ul>
       </div>
     );
