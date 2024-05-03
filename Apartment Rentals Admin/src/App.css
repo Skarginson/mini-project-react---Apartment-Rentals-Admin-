@@ -87,7 +87,7 @@ a.active {
 }
 
 .rentals-card > img:first-of-type {
-  height: 15rem;
+  height: 40%;
 }
 
 .flag {
@@ -98,4 +98,8 @@ a.active {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+a {
+  width: 20rem;
 }
