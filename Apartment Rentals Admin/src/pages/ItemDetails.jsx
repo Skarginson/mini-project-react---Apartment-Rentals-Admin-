@@ -22,50 +22,50 @@ function ItemDetails() {
   const el = rentalsAvailable.results.find((el) => el.id === id);
 
   return (
-    <div key={el.id}>
-      <p className="Name"> {el.name}</p>
-      <p className="Localisation">
+    <div className="item-details" key={el.id}>
+      <h1 className="Name"> {el.name}</h1>
+      <h2 className="Localisation">
         {el.country} - {el.city}
-      </p>
+      </h2>
       <p className="Details">
-        Number of Bathroom : {el.bathrooms} <br />
-        Number of Bedrooms : {el.bedrooms} <br />
-        Price : {el.price} <br />
-        Property type : {el.property_type}
+        <span>Number of Bathroom :</span> {el.bathrooms} <br />
+        <span>Number of Bedrooms :</span> {el.bedrooms} <br />
+        <span>Price :</span> {el.price} <br />
+        <span>Property type :</span> {el.property_type}
         <br />
-        Review Score : {el.review_scores_rating}
+        <span>Review Score</span> : {el.review_scores_rating}
         <br />
       </p>
       <p className="Description">
-        What to expect :<br />
+        <h3>What to expect :</h3>
         {el.space}
         <br />
-        Why chose this rental ? <br />
+        <h3>Why chose this rental ?</h3>
         {el.description}
         <br />
-        House Rules : <br />
+        <h3>House Rules :</h3>
         {el.house_rules}
         <br />
       </p>
       <p className="hosts">
-        Host : {el.host_name}
+        <span>Host :</span> {el.host_name}
         <br />
-        Been host since : {el.host_since}
+        <span>Been host since :</span> {el.host_since}
         <br />
-        Average response time : {el.host_response_time}
+        <span>Average response time :</span> {el.host_response_time}
         <br />
       </p>
       <p className="financials">
-        Price : {el.price}
+        <span>Price :</span> {el.price}
         <br />
-        Cleaning Fee : {el.cleaning_fee}
+        <span>Cleaning Fee :</span> {el.cleaning_fee}
         <br />
-        Cancellation Policy : {el.cancellation_policy}
+        <span>Cancellation Policy :</span> {el.cancellation_policy}
         <br />
       </p>
-      <img src={villachere} className="Pictures" />
+      <img src={villachere} className="Pictures" /> <br />
       {el.country === "France" && <img src={FlagFrance} />}
-      {el.country === "Spain" && <img src={FlagSpain} />}
+      {el.country === "Spain" && <img src={FlagSpain} />} <br />
       <Link to="/" className="back-button">
         Return to home
       </Link>
