@@ -101,19 +101,6 @@ a.active {
   flex-wrap: wrap;
 }
 
-
-
-
-
-f<<<<<< HEAD
-form {
-  display: flex;
-  flex-direction: column;
- =======
-a {
-  width: 25%;
-}
-
 /* 
 Faire un media query pour les différents thèmes. 
 
