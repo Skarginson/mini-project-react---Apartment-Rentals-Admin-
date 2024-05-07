@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import About from "./pages/About";
 import ItemDetails from "./pages/ItemDetails";
+import NewItemForm from "./components/NewItemForm";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Sidebar />
         <div className="main-div">
           <Routes>
+            <Route path="/NewItemForm" Component={NewItemForm} />
             <Route path="/" Component={Dashboard} />
             <Route path="/about" Component={About} />
             <Route path="*" element={<h1>404 Page Not Found!</h1>} />

@@ -101,6 +101,15 @@ a.active {
   flex-wrap: wrap;
 }
 
+
+
+
+
+f<<<<<< HEAD
+form {
+  display: flex;
+  flex-direction: column;
+ =======
 a {
   width: 25%;
 }
