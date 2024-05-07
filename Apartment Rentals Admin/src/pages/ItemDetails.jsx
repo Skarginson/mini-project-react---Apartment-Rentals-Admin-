@@ -37,19 +37,22 @@ function ItemDetails() {
         <br />
       </p>
       <p className="Description">
+        What to expect :<br />
         {el.space}
         <br />
+        Why chose this rental ? <br />
         {el.description}
         <br />
+        House Rules : <br />
         {el.house_rules}
         <br />
       </p>
       <p className="hosts">
-        {el.host_name}
+        Host : {el.host_name}
         <br />
-        {el.host_since}
+        Been host since : {el.host_since}
         <br />
-        {el.host_response_time}
+        Average response time : {el.host_response_time}
         <br />
       </p>
       <p className="financials">
