@@ -1,13 +1,10 @@
-import rentals from "../assets/rentals.json";
 import villachere from "../assets/villachere.jpg";
 import FlagFrance from "../assets/Flag_of_France.png";
 import FlagSpain from "../assets/Flag_of_Spain.png";
 // import NotFound from "../pages/NotFound";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function RentalList() {
-  const [rentalsAvailable, setRentals] = useState(rentals);
+function RentalList({ rentalsAvailable, setRentals }) {
   // const { id } = useParams();
   // const rental = rentals.find((rent) => rent.id === parseInt(id));
   // if (!rental){
