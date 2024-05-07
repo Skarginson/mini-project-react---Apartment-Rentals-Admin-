@@ -80,10 +80,11 @@ a.active {
 .rentals-card {
   height: 30rem;
   box-shadow: #000;
-  width: 33%;
+  /* width: 33%; */
   border: red solid 1px;
   display: flex;
   flex-direction: column;
+  margin: 2rem;
 }
 
 .rentals-card > img:first-of-type {
@@ -101,5 +102,14 @@ a.active {
 }
 
 a {
-  width: 20rem;
+  width: 25%;
 }
+
+/* 
+Faire un media query pour les différents thèmes. 
+
+@media (prefers-color-scheme: light) {
+  .card > a {
+    color: #213547;
+  }
+} */
