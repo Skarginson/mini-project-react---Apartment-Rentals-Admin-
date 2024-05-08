@@ -1,14 +1,11 @@
-import rentals from "../assets/rentals.json";
 import villachere from "../assets/villachere.jpg";
 import FlagFrance from "../assets/Flag_of_France.png";
 import FlagSpain from "../assets/Flag_of_Spain.png";
 import FlagGermany from "../assets/Flag_of_Germany.png"
 // import NotFound from "../pages/NotFound";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function RentalList() {
-  const [rentalsAvailable, setRentals] = useState(rentals);
+function RentalList({ rentalsAvailable, setRentals }) {
   // const { id } = useParams();
   // const rental = rentals.find((rent) => rent.id === parseInt(id));
   // if (!rental){
@@ -46,10 +43,8 @@ function RentalList() {
               )}
               {el.country === "Spain" && (
                 <img src={FlagSpain} className="flag" />
-              )} 
-              {el.country === "Germany" && (
-                <img src={FlagGermany} className="flag" />
-              )}    
+              )}
+              <button onClick={() => deleteRentals(el.name)}>Delete</button>
             </div>
           </Link>
           <button onClick={() => deleteRentals(el.name)} className="deleteButton">Delete</button>

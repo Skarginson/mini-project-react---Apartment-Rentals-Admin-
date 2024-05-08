@@ -28,7 +28,7 @@ function NewItemForm({ rentals = [RentalList] }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="new-rental-form" onSubmit={handleSubmit}>
       <label htmlFor="country">
         Country
         <input
