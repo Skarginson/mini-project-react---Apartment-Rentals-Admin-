@@ -380,8 +380,8 @@ a.active {
   margin: 2rem;
 }
 
-.rentals-card > img:first-of-type {
-  height: 40%;
+.house {
+  width: 20rem;
 }
 
 .flag {
