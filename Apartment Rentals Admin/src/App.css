@@ -98,9 +98,7 @@ a.active {
 
 .rentals-card {
   height: 30rem;
-  box-shadow: #000;
   /* width: 33%; */
-  border: red solid 1px;
   background-color: var(--second-background-color);
   display: flex;
   flex-direction: column;
