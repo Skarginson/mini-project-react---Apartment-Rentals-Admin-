@@ -1,5 +1,5 @@
 /* Todo : 
-- Drapeau en space around 
+- Drapeau en space around -> Ok
 - cards pas de la même dimension ? -> Problème de wrap, mais pas trouvé. 
 - hauteurs des pages About/Add new rental // Bidouillé OK
 - Rental form en column
@@ -110,7 +110,9 @@ a.active {
 }
 
 .flag {
-  height: 3rem;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rentals-list {
