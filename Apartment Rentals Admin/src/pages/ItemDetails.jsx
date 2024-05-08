@@ -19,6 +19,8 @@ function ItemDetails() {
       results: rentalsToKeep,
     });
   }
+  
+  
   const el = rentalsAvailable.results.find((el) => el.id === id);
 
   return (

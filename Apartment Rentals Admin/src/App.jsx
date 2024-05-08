@@ -21,7 +21,14 @@ function App() {
         <Sidebar />
         <div className="main-div">
           <Routes>
-            <Route path="/NewItemForm" Component={NewItemForm} />
+            <Route path="/NewItemForm" 
+              element={
+                <NewItemForm
+                rentalsAvailable={rentalsAvailable}
+                setRentals={setRentals}
+                 />
+              }
+           />
             <Route
               path="/"
               element={
@@ -44,7 +51,3 @@ function App() {
 
 export default App;
 
-/*
-Todo :
-    Filter france / spain
-*/

@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import  { useState } from "react";
-import RentalList from "./RentalList";
 
-function NewItemForm({ rentals = [RentalList] }) {
-  const [rental, setRental] = useState({
+function NewItemForm({ setRentals}) {
+
+  const [newRental, setNewRental] = useState({
     country: "",
     city: "",
     name: "",
@@ -13,7 +13,7 @@ function NewItemForm({ rentals = [RentalList] }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setRental((prevRental) => ({
+    setNewRental((prevRental) => ({
       ...prevRental,
       [name]: value,
     }));
@@ -21,10 +21,16 @@ function NewItemForm({ rentals = [RentalList] }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setRental((prevRental) => ({
-      ...prevRental,
-      id: (rentals.length + 1).toString(),
-    }));
+    setRentals((prevRental) => {
+      console.log(prevRental)
+      const newId = prevRental.idCounter + 1
+      return ({
+        ...prevRental,
+        idCounter : newId,
+        results: [...prevRental.results, {...newRental, id: newId}]
+      })
+    });
+
   };
 
   return (
@@ -35,7 +41,7 @@ function NewItemForm({ rentals = [RentalList] }) {
           type="text"
           name="country"
           id="country"
-          value={rental.country}
+          value={newRental.country}
           onChange={handleChange}
         />
       </label>
@@ -45,7 +51,7 @@ function NewItemForm({ rentals = [RentalList] }) {
           type="text"
           name="city"
           id="city"
-          value={rental.city}
+          value={newRental.city}
           onChange={handleChange}
         />
       </label>
@@ -55,7 +61,7 @@ function NewItemForm({ rentals = [RentalList] }) {
           type="text"
           name="name"
           id="name"
-          value={rental.name}
+          value={newRental.name}
           onChange={handleChange}
         />
       </label>
@@ -65,7 +71,7 @@ function NewItemForm({ rentals = [RentalList] }) {
           type="text"
           name="property_type"
           id="property_type"
-          value={rental.property_type}
+          value={newRental.property_type}
           onChange={handleChange}
         />
       </label>
@@ -76,7 +82,7 @@ function NewItemForm({ rentals = [RentalList] }) {
           id="description"
           rows="10"
           cols="40"
-          value={rental.description}
+          value={newRental.description}
           onChange={handleChange}
         />
       </label>

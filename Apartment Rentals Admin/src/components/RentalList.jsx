@@ -15,9 +15,9 @@ function RentalList({ rentalsAvailable, setRentals }) {
   // }
   // console.log(id)
 
-  function deleteRentals(name) {
+  function deleteRentals(id) {
     const rentalsToKeep = rentalsAvailable.results.filter(
-      (rental) => rental.name !== name
+      (rental) => rental.id !== id
     );
 
     setRentals({
@@ -49,7 +49,7 @@ function RentalList({ rentalsAvailable, setRentals }) {
               )}    
             </div>
           </Link>
-          <button onClick={() => deleteRentals(el.name)} className="delete-button">Delete</button>
+          <button onClick={() => deleteRentals(el.id)} className="delete-button">Delete</button>
           </div>
         );
       })}
