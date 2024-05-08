@@ -156,3 +156,15 @@ Faire un media query pour les différents thèmes.
 .item-details span {
   font-weight: bold;
 }
+
+.delete-button {
+  background-color: var(--button-color);
+}
+
+.new-rental-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+}

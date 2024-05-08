@@ -42,7 +42,12 @@ function RentalList({ rentalsAvailable, setRentals }) {
               {el.country === "Spain" && (
                 <img src={FlagSpain} className="flag" />
               )}
-              <button onClick={() => deleteRentals(el.name)}>Delete</button>
+              <button
+                className="delete-button"
+                onClick={() => deleteRentals(el.name)}
+              >
+                Delete
+              </button>
             </div>
           </Link>
         );

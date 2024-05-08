@@ -28,62 +28,60 @@ function NewItemForm({ rentals = [RentalList] }) {
   };
 
   return (
-    <div className="new-rental-form">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="country">
-          Country
-          <input
-            type="text"
-            name="country"
-            id="country"
-            value={rental.country}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          City
-          <input
-            type="text"
-            name="city"
-            id="city"
-            value={rental.city}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Name
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={rental.name}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Property type
-          <input
-            type="text"
-            name="property_type"
-            id="property_type"
-            value={rental.property_type}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Description
-          <textarea
-            name="description"
-            id="description"
-            rows="10"
-            cols="40"
-            value={rental.description}
-            onChange={handleChange}
-          />
-        </label>
-        <input type="submit" value="Add new rental" />
-      </form>
-    </div>
+    <form className="new-rental-form" onSubmit={handleSubmit}>
+      <label htmlFor="country">
+        Country
+        <input
+          type="text"
+          name="country"
+          id="country"
+          value={rental.country}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        City
+        <input
+          type="text"
+          name="city"
+          id="city"
+          value={rental.city}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Name
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value={rental.name}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Property type
+        <input
+          type="text"
+          name="property_type"
+          id="property_type"
+          value={rental.property_type}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Description
+        <textarea
+          name="description"
+          id="description"
+          rows="10"
+          cols="40"
+          value={rental.description}
+          onChange={handleChange}
+        />
+      </label>
+      <input type="submit" value="Add new rental" />
+    </form>
   );
 }
 
