@@ -1,12 +1,9 @@
-import rentals from "../assets/rentals.json";
 import villachere from "../assets/villachere.jpg";
 import FlagFrance from "../assets/Flag_of_France.png";
 import FlagSpain from "../assets/Flag_of_Spain.png";
-import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-function ItemDetails() {
-  const [rentalsAvailable, setRentals] = useState(rentals);
+function ItemDetails({rentalsAvailable, setRentals}) {
   const { id } = useParams();
 
   function deleteRentals(name) {
@@ -70,6 +67,9 @@ function ItemDetails() {
       {el.country === "Spain" && <img src={FlagSpain} />} <br />
       <Link to="/" className="back-button">
         Return to home
+      </Link>
+      <Link to={`/edit-rental/${id}`} className="back-button">
+        Edit
       </Link>
     </div>
   );

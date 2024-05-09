@@ -21,14 +21,15 @@ function App() {
         <Sidebar />
         <div className="main-div">
           <Routes>
-            <Route path="/NewItemForm" 
+            <Route
+              path="/NewItemForm"
               element={
                 <NewItemForm
-                rentalsAvailable={rentalsAvailable}
-                setRentals={setRentals}
-                 />
+                  rentalsAvailable={rentalsAvailable}
+                  setRentals={setRentals}
+                />
               }
-           />
+            />
             <Route
               path="/"
               element={
@@ -40,7 +41,24 @@ function App() {
             />
             <Route path="/about" Component={About} />
             <Route path="*" element={<h1>404 Page Not Found!</h1>} />
-            <Route path="/rentals/:id" Component={ItemDetails} />
+            <Route
+              path="/rentals/:id"
+              element={
+                <ItemDetails
+                  rentalsAvailable={rentalsAvailable}
+                  setRentals={setRentals}
+                />
+              }
+            />
+            <Route
+              path="/edit-rental/:id"
+              element={
+                <NewItemForm
+                  rentalsAvailable={rentalsAvailable}
+                  setRentals={setRentals}
+                />
+              }
+            />
           </Routes>
         </div>
       </main>
@@ -50,4 +68,3 @@ function App() {
 }
 
 export default App;
-
